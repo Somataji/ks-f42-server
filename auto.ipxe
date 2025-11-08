@@ -1,0 +1,8 @@
+set base https://download.fedoraproject.org/pub/fedora/linux/releases/42/Server/x86_64/os/images/pxeboot
+set repo  https://download.fedoraproject.org/pub/fedora/linux/releases/42/Server/x86_64/os/
+
+set ks https://Somataji.github.io/ks-f42-server/ks.cfg
+
+kernel ${base}/vmlinuz inst.ks=${ks} inst.repo=${repo} ip=dhcp
+initrd ${base}/initrd.img
+boot
